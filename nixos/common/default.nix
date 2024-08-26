@@ -43,4 +43,8 @@
 
   # Ensure a clean & sparkling /tmp on fresh boots.
   boot.tmp.cleanOnBoot = lib.mkDefault true;
+
+  # Enable irqbalance, a daemon that balances interrupts across all available
+  # CPUs which can help with system performance and responsiveness.
+  services.irqbalance.enable = lib.mkDefault true;
 }
